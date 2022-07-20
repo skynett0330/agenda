@@ -1,0 +1,107 @@
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <%- include("../partials/aside.ejs") %>
+                </div>
+                <div class="col-10">
+                    <div class="card" id=cardGeral>
+                        <div class="card-header">
+                            <h4>Serviços</h4>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item "><a class="nav-link active" href="#empresas"
+                                        data-toggle="tab">Empresas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#orgaos" data-toggle="tab">Orgãos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="tab-content">
+                                    <div id="empresas" class="tab-pane active">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="input-group-sm">
+                                                    <label>Nome/Razão</label>
+                                                    <input class="form-control">
+                                                    <label>Tel Funcional</label>
+                                                    <input class="form-control" placeholder="(81) ">
+                                                    <label>Tel/Serviço</label>
+                                                    <input class="form-control" placeholder="(81) ">
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="input-group-sm">
+                                                    <label>Logradouro</label>
+                                                    <input class="form-control">
+                                                    <label>Número</label>
+                                                    <label>Bairro</label>
+                                                    <div class="form-inline input-group-sm">
+                                                        <input class="form-control" style="width:45px">
+                                                        <input class="form-control" style="width:180px">
+                                                    </div>
+                                                    <label>cidade</label>
+                                                    <input class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <div class="input-group-sm">
+                                                    <label>Responsável Técnico</label>
+                                                    <input class="form-control">
+                                                    <label>Tel/contato</label>
+                                                    <input class="form-control">
+                                                    <label>Email</label>
+                                                    <input class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="input-group-sm">
+                                                    <label>Data Checkin</label>
+                                                    <input class="form-control" type="datetime-local">
+                                                    <label>Data CheckOut</label>
+                                                    <input class="form-control" type="datetime-local">
+                                                    <br>
+                                                    <button class="btn btn-info btn-sm float-right"><i
+                                                            class="fa fa-plus" href="#">Adicionar</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="orgaos" class="tab-pane active">
+                                        orgaos
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="table-servicos">
+                                <table class="table table-sm table-striped">
+                                    <thead class="bg-danger-light">
+                                        <tr>
+                                            <th>Nome/Razão</th>
+                                            <th>Tel funcional</th>
+                                            <th>Tel/Serviço</th>
+                                            <th>Logradouro</th>
+                                            <th>Responsavel Técnico</th>
+                                            <th>Tel/contato</th>
+                                            <th>Email</th>
+                                            <th>Data CheckIn</th>
+                                            <th>Data checkOut</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <td>eu</td>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <%- include("../partials/cdn.ejs") %>
+    </body>

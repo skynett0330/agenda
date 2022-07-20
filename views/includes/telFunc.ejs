@@ -1,0 +1,87 @@
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <%- include("../partials/aside.ejs")%>
+                </div>
+                <div class="col-10">
+                    <div class="card" id=cardGeral>
+                        <div class="card-header">
+                            <div class="form-inline">
+                                <h5>Lista de Telefones Batalhões</h5>
+                                <div class="col-4">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Buscar..."
+                                            aria-label="busca" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" type="button" id="button-addon2"><i
+                                                    class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                       
+
+                                <div class="col-12">
+                                    <table class="table table-sm table-striped bg-light">
+                                        <thead class="table-bg">
+                                            <tr>
+                                                <th>Uni/Bpm</th>
+                                                <th>Comando</th>
+                                                <th>Sub-C</th>
+                                                <th>P1</th>
+                                                <th>P2</th>
+                                                <th>P3</th>
+                                                <th>P4</th>
+                                                <th>cia</th>
+                                                <th>Secret</th>
+                                                <th>Stc</th>
+                                                <th>Copom</th>
+                                                <th>Guarda</th>
+                                                <th>Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-1"> <input class="form-control form-control-sm" name="bpm"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm" name="com"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="sub"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="p1"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="p2"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="p3"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="p4"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="cia"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="secret"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="stc"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="copom"></td>
+                                                <td class="col-1"> <input class="form-control form-control-sm " name="guarda"></td>
+                                                
+                                                <td class="col-1"><a href="#"class="fa fa-plus "></a>|</td>
+
+                                            </tr>
+                                              <tr>
+                                                  <td>20ºbpm</td>
+                                              </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <%- include("../partials/cdn.ejs") %>
+    </body>

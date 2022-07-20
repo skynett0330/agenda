@@ -1,0 +1,145 @@
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <div class="col-sm-2">
+        <div class="page-wrapper chiller-theme toggled">
+            <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+                <i class="fas fa-bars"></i>
+            </a>
+            <nav id="sidebar" class="sidebar-wrapper">
+                <div class="sidebar-content">
+                    <div class="sidebar-brand text-right">
+                        <div class="input-group text-white">
+                            <a href="/contatos/index"><img src="/img/logo.png" style="height: 60px;"></a>
+                            Agenda CMD
+
+                        </div>
+                        <a href="/users/logout"><i class="fa fa-power-off ">sair</i></a>
+                    </div>
+
+                    <!-- ----------------------------------------------------------------------------- -->
+                    <div class="sidebar-header">
+                        <div class="user-pic">
+                            <img class="img-responsive img-rounded" src="/img/avatar.png" alt="User picture">
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name">
+                                <strong class="text-white"></strong>
+                            </span>
+                            <span class="user-role fa fa-user"></span>
+                            <span class="user-status">
+                                <i class="fa fa-circle"></i>
+                                <span>Online</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- sidebar-header  -->
+                    <div class="sidebar-search">
+                        <div>
+                            <form method="POST" action="/contatos/matricula">
+                                <div class="input-group">
+
+                                    <input type="text" class="form-control search-menu" placeholder="Matrícula..." required
+                                        name="matricula">
+                                    <div class="input-group-append">
+
+                                        <button class="btn btn-danger"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+            <ul>
+                <li class="header-menu">
+                    <span>Agenda comando</span>
+                </li>
+                <li class="sidebar-dropdown">
+                    <a href="#">
+                        <i class="fa fa-phone"></i>
+                        <span>Contatos</span>
+                        <span class="badge badge-pill badge-warning"></span>
+                    </a>
+                    <div class="sidebar-submenu">
+                        <ul>
+
+                            <a href="/contatos/list">Agendamentos
+                                <span class="badge badge-pill badge-success fa fa-user"></span>
+                            </a>
+                            <a href="/contatos/telFunc">TEL/COMANDOS</a>
+                           
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-dropdown">
+                    <div class="sidebar-submenu">
+                        <ul>
+
+                            <a href="/agenda">Agendamentos
+                            </a>
+
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-dropdown">
+
+                    <div class="sidebar-submenu">
+                        <ul>
+                            <li>
+                                <a href="/servicos">Empresas/Orgãos</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-dropdown">
+                    <a href="#">
+                        <i class="far fa-gem"></i>
+                        <span>Serviços</span>
+                    </a>
+                    <div class="sidebar-submenu">
+                        <ul>
+
+
+                            <a href="/users/add">
+                                <i class="fa fa-user"></i>
+                                <span>+ Usuários</span>
+
+                            </a>
+
+
+                            <a href="/users/getAll">
+                                <i class="fa fa-users"></i>
+                                <span> Usuários</span>
+
+                            </a>
+
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- sidebar-menu  -->
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+        <a href="#">
+            <i class="fa fa-bell"></i>
+            <span class="badge badge-pill badge-warning notification">3</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-envelope"></i>
+            <span class="badge badge-pill badge-success notification">7</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-cog"></i>
+            <span class="badge-sonar"></span>
+        </a>
+    </div>
+    </nav>
+    </div>
+
+</nav>

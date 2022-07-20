@@ -1,0 +1,66 @@
+<%- include('../partials/head.ejs')%>
+
+    <body class="bg-dark">
+<br>
+        <div class="container-sm  col-9">
+            <div class="card mt-5">
+                <div class="card-header">
+
+
+                    <%if(messages.success_msg) {%>
+                        <div class="alert alert-success">
+                            <%= messages.success_msg%>
+                        </div>
+                        <%}%>
+
+                            <h3>Usuários</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row col-12">
+                        <div class="table-responsive">
+                        <table class="table table-sm ">
+                            <thead class="bg-table">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Usuário</th>
+                                    <th>Email</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% users.forEach(user=>{ %>
+                                    <tr>
+                                        <td >
+                                            <%= user.id_user%>
+                                        </td>
+                                        <td>
+                                            <%= user.name%>
+                                        </td>
+                                        <td >
+                                            <%= user.email%>
+                                        </td>
+                                       
+                                    
+                                        
+                                        <td><a href="/users/delete/<%= user.id_user%>" class="fa fa-trash" 
+                                                onclick=" return confirm('deseja deletar ?')"></a></td>
+                                                <%})%>  
+                                                                        </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="/contatos/index"><button class="btn btn-danger btn-sm">Fechar</button></a>
+
+                </div>
+
+
+            </div>
+            <div class="card-footer">
+            </div>
+    </body>

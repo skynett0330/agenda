@@ -1,0 +1,73 @@
+<%- include('../partials/head.ejs')%>
+
+    <body class="bg-dark">
+        <div class="row">
+            <%- include( '../partials/aside.ejs' )%>
+                <div class="container col-5">
+                    <div class=" card mt-5">
+
+                        <div class="card-header ">
+
+                            <h4>Cadastrar Usuário</h4>
+                            <form method="post" action="/contatos/getUserRegister">
+                                <div class="input-group">
+
+                                    <input class="form-control form-control-sm col-3" placeholder="Matrícula..."
+                                        name="mat">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-info  fa fa-search" type="submit"></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body ">
+                            <form method="POST" action="/users/register">
+                                <script>
+
+                                </script>
+
+                                <% if(typeof dados !='undefined' ) {%>
+                                    <% dados.forEach(dado=>{%>
+
+                                        <label>Matrícula</label>
+                                        <input class="form-control form-control-sm" name="matricula"
+                                            value="<%= dado.matricula%>" readonly>
+                                        <label>Nome:</label>
+                                        <input class="form-control form-control-sm" name="name" readonly
+                                            value="<%= dado.nome_guerra_sgp%>">
+                                        <label>email</label>
+                                        <input class="form-control form-control-sm" name="email" readonly
+                                            value="<%= dado.email_funcional%>">
+                                        <%})%>
+                                            <%}%>
+                                                <label>Senha</label>
+                                                <input class="form-control form-control-sm" name="password"
+                                                    type="password">
+                                                <label>Confirme à senha</label>
+                                                <input class="form-control form-control-sm" name="password2"
+                                                    type="password">
+                        </div>
+
+
+                        <% if(typeof errors !='undefined' ) {%>
+                            <% errors.forEach(error=>{ %>
+                                <div class="alert alert-danger">
+                                    <li>
+                                        <%= error.message %>
+                                    </li>
+                                </div>
+                                <%})%>
+                                    <%}%>
+
+                                        <div class="card-footer ">
+                                            <button class="btn btn-success btn-sm">Salvar</button> |
+                                            </form>
+                                            <a href="/contatos/index"><button data-backdrop="static"
+                                                    class="btn btn-outline-danger btn-sm"
+                                                    type="button">Voltar</button></a>
+                                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </body>

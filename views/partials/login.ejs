@@ -1,0 +1,48 @@
+<%- include("partials/head.ejs") %>
+
+    <body class="bg-dark">
+
+        <div class="container">
+            <form method="POST" action="/index">
+                <div class="card card-login mx-auto mt-5" style="width:25rem;">
+                    <div class="card-header">
+                        <a><img src="/img/logo.png" width="50">Dtec-Agenda</a>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label for="usuario">Usuário:</label>
+                            <input type="usuario" class="form-control" name="usuario" id=usuario placeholder="Digite sua matrícula...">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input id="senha" class="form-control" for="senha" type="password" placeholder="Digite sua senha...">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    Lembrar minha senha
+                                    </albel>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                    <button class="btn btn-info btn-block">Entrar no Sistema</button>
+                    </div>
+                    <a href="/cadastrar" class="text-center">Cadastrar usuário</a>
+                    <a href="/recsenha" class="text-center">Recuperar senha</a>
+            </form>
+        </div>
+        </aside>
+
+
+
+
+
+
+        <%- include("partials/cdn.ejs") %>
+    </body>
+
+    </html>

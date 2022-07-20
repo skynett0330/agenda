@@ -1,0 +1,68 @@
+<%- include('../partials/head.ejs') %>
+
+    <body class="bg-dark">
+
+        </br>
+        </br>
+
+        <div class="container col-3 bordered-2x ">
+            <% if(typeof errors !='undefined' ) {%>
+
+                <% errors.forEach(error=>{ %>
+
+                    <div class="alert alert-danger alert-sm ">
+                        <li>
+                            <%= error.message %>
+                        </li>
+                    </div>
+
+                    <%})%>
+                        <%}%>
+
+                            <%if(messages.success_msg) {%>
+                                <div class="alert bg-success text-white">
+                                    <%= messages.success_msg%>
+                                </div>
+                                <%}%>
+
+
+                                    <% if(messages.error){ %>
+
+                                        <div class="alert bg-danger text-white">
+                                            <%= messages.error%>
+                                        </div>
+
+                                        <% }%>
+
+                                            <div class="card mb-5">
+
+                                                <div class="card-header text-center text-white bg-dark">
+                                                    <img src="/img/logo.png" style="height:100px">
+                                                    Agenda CMD
+                                                </div>
+                                                <div class="card-body">
+                                                    <form action="/users/login" method="post">
+                                                        <div class=" form-group">
+                                                            <label>email</label>
+                                                            <input class="form-control form-control-sm" name="email"
+                                                                id="email">
+                                                            <lael>Senha</lael>
+                                                            <input class="form-control form-control-sm" name="password"
+                                                                id="password" type="password">
+                                                        </div>
+
+                                                        <li> <a href="users/redSenha">Redefinir a senha</a></li>
+
+                                                </div>
+                                                <div class="card-footer">
+                                                    <button class="btn btn-success btn-sm btn-block ">Logar</button>
+                                                    </form>
+                                                    
+                                                    <a href="/" class="btn btn-secondary btn-sm btn-block">Cancelar</a>
+
+
+                                                </div>
+
+                                            </div>
+
+    </body>

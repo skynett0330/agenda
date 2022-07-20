@@ -1,0 +1,394 @@
+<%- include("../partials/head.ejs") %>
+
+    <body >
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <%- include("../partials/aside.ejs") %>
+                </div>
+
+                <div class="col-10">
+
+                    <div class="card" id="">
+                        <div class="card-header">
+                            <div class="form-inline">
+
+
+
+                            </div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#contato">Contato</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#endereco">Endereço</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#email" data-toggle="tab" href="#email">Email</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#redes">Redes sociais</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#agendamentos">Agendamentos/Reuniões</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#observacao">Observação</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <!-- <form method="post" action="/contatos"> -->
+                            <div class="tab-content ">
+                                <div id="contato" class="container tab-pane active">
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-header" id="cardSecondary">
+                                                    <table class="table table-sm ">
+
+                                                        <thead class="table-bg">
+                                                            <tr>
+                                                                <th>Foto</th>
+                                                                <th>Tratamento</th>
+                                                                <th>Matrícula</th>
+                                                                <th>N-guerra</th>
+                                                                <th>Cargo/função</th>
+                                                                <th>Rg-M</th>
+                                                                <th>Seção</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <% datas.forEach(data=>{%>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><img src="/img/policial.png"
+                                                                            style="height:50px"></td>
+                                                                    <td>
+                                                                        <%= data.sigla%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= data.matricula_sgp%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= data.nome_guerra_sgp%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= data.descricao%>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= data.rg_funcional%>
+                                                                    </td>
+                                                                    <td>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+
+                                                    </table>
+                                                    <table class="table table-sm ">
+                                                        <thead class="table-bg">
+                                                            <tr>
+                                                                <th>
+                                                                    Nome completo
+                                                                </th>
+                                                                <th>Data nascimento</th>
+                                                                <th>Data ingresso</th>
+                                                                <th>F.sanguíneo</th>
+                                                                <th>F.Rh</th>
+                                                            </tr>
+
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <%= data.nome_completo%>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.data_nasc%>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.data_ingresso_sgp%>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.fator_sanguineo%>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.fator_rh%>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <table class="table table-sm ">
+                                                    <thead class="table-bg justify">
+                                                        <tr>
+
+                                                            <th scope="col">Tel Func</th>
+                                                            <th scope="col">Email Func</th>
+                                                            <th scope="col">Tel Part</th>
+                                                            <th scope="col">Email Part</th>
+
+                                                            <th scope="col">Tel</th>
+                                                            <th scope="col">Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <td>
+                                                            <%= data.telefone_celular%>
+                                                        </td>
+                                                        <td>
+                                                            <%= data.email_funcional %>
+                                                        </td>
+                                                        <td>
+                                                            <%= data.telefone_contato %>
+                                                        </td>
+                                                        <td>
+                                                            <%= data.email_pessoal %>
+                                                        </td>
+
+                                                        <td></td>
+                                                        <td>
+                                                            <a href="#" data-target="#myModal1" data-toggle="modal">
+                                                                <spam class="fa fa-edit"></spam>
+                                                            </a>
+                                                        </td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Editar
+                                                                Telefone e email
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Tel Particular:
+                                                            <input class="form-control form-control-sm" type="tel"
+                                                                placeholder="(81)9########">
+                                                            Email Pessoal:
+                                                            <input class="form-control form-control-sm" type="email">
+                                                            Seção/Diretoria
+                                                            <input class="form-control form-control-sm" type="text">
+                                                            Tel/ramal
+                                                            <input class="form-control form-control-sm" type="tel"
+                                                                placeholder="(81)3181-####">
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Sair</button>
+                                                            <button type="button" class="btn btn-primary">Salvar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-12 ">
+                                                <table class="table table-sm">
+                                                    <thead class="table-bg">
+                                                        <tr>
+
+                                                            <th scope="col">Bpm/òrgao</th>
+                                                            <th>Sessão/diretoria</th>
+                                                            <th>Tel func</th>
+                                                            <th>Ramal</th>
+                                                            <th>Email</th>
+                                                            <th>dir</th>
+                                                            <th scope="col">Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <td></td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>
+                                                            <a href="#" data-toggle="modal" data-target="#myModal2">
+                                                                <spam class="fa fa-edit"></spam>
+                                                            </a>
+                                                        </td>
+                                                    </tbody>
+                                                </table>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Editar
+                                                                    dados
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Bpm/òrgão
+                                                                <input class="form-control form-control-sm" type="tel">
+                                                                Sessão/diretoria
+                                                                <input class="form-control form-control-sm" type="text">
+                                                                Tel Func
+                                                                <input class="form-control form-control-sm" type="tel">
+
+                                                                Ramal
+                                                                <input class="form-control form-control-sm" type="tel"
+                                                                    placeholder="(81)3181-####">
+
+                                                                Email
+                                                                <input class="form-control form-control-sm"
+                                                                    type="email">
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="endereco" class="container tab-pane fade">
+                                    <table class="table table-sm">
+                                        <thead class="table-bg">
+                                            <tr>
+
+                                                <th>logradouro</th>
+                                                <th>Número</th>
+                                                <th>Bairro</th>
+                                                <th>Cep</th>
+                                                <th>P.ref</th>
+                                                <th>Cidade</th>
+                                                <th>Estado</th>
+                                                <th>Ação</th>
+                                            </tr>
+                                        <tbody>
+                                            <td>
+                                                <%= data.logradouro %>
+                                            </td>
+                                            <td>
+                                                <%= data.numero %>
+                                            </td>
+                                            <td>
+                                                <%= data.bairro %>
+                                            </td>
+                                            <td>
+                                                <%= data.cep%>
+                                            </td>
+                                            <td>
+                                                <%= data.ponto_referencia %>
+                                            </td>
+                                            <td>
+                                                <%= data.cidade %>
+                                            </td>
+                                            <td>
+                                                <%= data.estado %>
+                                            </td>
+                                            <td><a class="fa fa-edit"></td>
+
+                                        </tbody>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div id="email" class="container tab-pane fade">
+                                    <table class="table table-sm table-striped">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col">Tipo</th>
+                                                <th scope="col">Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <td>adsda</td>
+                                            <td>sadsa</td>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <div id="redes" class="container tab-pane fade">
+                                    <table class="table table-sm table-striped">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>tipo</th>
+                                                <th>Rede Social</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <td></td>
+                                            <td></td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="observacao" class="container tab-pane fade">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea3">Observações:</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea3"
+                                            rows="7"></textarea>
+                                    </div>
+                                    <div class="form-inline">
+                                        <button class="btn btn-success">Salvar</button>
+                                    </div>
+                                </div>
+                                <div class="container tab-pane fade" id="agendamentos">
+                                    <div class="table_agendamentos">
+                                        <table class="table table-sm table-striped bg-light">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data</th>
+                                                    <th>Horário</th>
+                                                    <th>Assunto</th>
+                                                    <th>Local</th>
+                                                    <th>Recados</th>
+                                                    <th>Ações</th>
+
+                                                </tr>
+
+                                            </thead>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <%})%>
+                                <!-- </form> -->
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+                    <%- include('../partials/cdn.ejs') %>
+    </body>

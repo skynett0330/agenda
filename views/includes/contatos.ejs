@@ -1,0 +1,29 @@
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <div class="container-fluid-sm">
+            <div class="row">
+                <div class="col-2">
+                    <%- include('../partials/aside.ejs')%>
+                </div>
+                <div class="col-9">
+                    <div class="alert alert-info ">
+
+                   Bem vindo!  
+                   <% if(typeof user != 'undefined'){%>
+                   <%= user %>
+                        <%}%>
+
+                                    <div class="">
+                                        <p id="demo"></p>
+                                    </div>
+                                    <script>
+                                        const d = new Date();
+                                        document.getElementById("demo").innerHTML = d
+                                    </script>
+                    </div>
+                    <%- include("../partials/main.ejs")%>
+                </div>
+            </div>
+            <%- include('../partials/cdn.ejs') %>
+    </body>
